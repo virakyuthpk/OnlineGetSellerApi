@@ -1,0 +1,313 @@
+[28-Apr-2018 03:22:31 UTC] PHP Warning:  require(/home/onlineget/public_html/vendor/composer/../psy/psysh/src/Psy/functions.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/composer/autoload_real.php on line 66
+[28-Apr-2018 03:22:31 UTC] PHP Fatal error:  require(): Failed opening required '/home/onlineget/public_html/vendor/composer/../psy/psysh/src/Psy/functions.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/composer/autoload_real.php on line 66
+[28-Apr-2018 03:22:31 UTC] PHP Warning:  require(/home/onlineget/public_html/vendor/composer/../psy/psysh/src/Psy/functions.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/composer/autoload_real.php on line 66
+[28-Apr-2018 03:22:31 UTC] PHP Fatal error:  require(): Failed opening required '/home/onlineget/public_html/vendor/composer/../psy/psysh/src/Psy/functions.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/composer/autoload_real.php on line 66
+[02-Aug-2018 05:17:02 UTC] PHP Fatal error:  Cannot use App\Models\Orders as Orders because the name is already in use in /home/onlineget/public_html/app/Http/Controllers/Frontend/MemberController.php on line 24
+[02-Aug-2018 05:18:00 UTC] PHP Fatal error:  Cannot use App\Models\Orders as Orders because the name is already in use in /home/onlineget/public_html/app/Http/Controllers/Frontend/MemberController.php on line 24
+[02-Aug-2018 05:18:38 UTC] PHP Fatal error:  Cannot use App\Models\Orders as Orders because the name is already in use in /home/onlineget/public_html/app/Http/Controllers/Frontend/MemberController.php on line 24
+[03-Aug-2018 06:27:26 UTC] PHP Fatal error:  Cannot use [] for reading in /home/onlineget/public_html/storage/framework/views/171f38f545fab582ea2dbe6743fbd26fe8244458.php on line 46
+[03-Aug-2018 17:24:35 UTC] PHP Fatal error:  Cannot use App\User as User because the name is already in use in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 28
+[03-Aug-2018 17:24:54 UTC] PHP Fatal error:  Cannot use DB as DB because the name is already in use in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 28
+[05-Aug-2018 06:47:20 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::userhelp() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 866
+[05-Aug-2018 06:47:32 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::userhelp() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 866
+[05-Aug-2018 06:48:31 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::userhelp() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 866
+[05-Aug-2018 06:48:36 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::userhelp() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 866
+[05-Aug-2018 06:48:53 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::userhelp() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 866
+[05-Aug-2018 06:49:25 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::userhelp() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 866
+[12-Aug-2018 11:06:15 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:06:22 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:06:23 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:06:23 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:06:23 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:06:23 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:06:23 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:07:02 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:07:03 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:07:03 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:07:03 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:07:03 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[12-Aug-2018 11:07:03 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\LoginApiController::ProductDetail() in /home/onlineget/public_html/app/Http/Controllers/LoginApiController.php on line 1147
+[30-Aug-2018 07:51:14 UTC] PHP Fatal error:  Cannot use App\User as User because the name is already in use in /home/onlineget/public_html/app/Http/Controllers/FrontendApiController.php on line 28
+[02-Sep-2018 09:40:49 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 306
+[02-Sep-2018 09:40:49 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 306
+[02-Sep-2018 09:41:39 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:41:42 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:41:46 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:41:49 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:42:05 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:42:08 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:42:29 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:42:32 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:42:36 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[02-Sep-2018 09:43:00 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\HomeController::productshop() in /home/onlineget/public_html/app/Http/Controllers/HomeController.php on line 303
+[05-Sep-2018 04:51:13 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:13 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:24 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:24 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:31 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:31 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:35 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:35 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:43 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:43 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:54 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:54 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:57 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:51:57 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:02 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:02 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:06 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:06 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:10 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:10 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:16 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:16 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:31 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:31 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:32 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:32 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:32 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:32 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:38 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:52:38 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:53:34 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:53:34 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:53:35 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:53:35 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:53:35 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 04:53:35 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:10 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:11 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:11 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:20 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:22 UTC] PHP Warning:  Uncaught ErrorException: require(/home/onlineget/public_html/routes/api.php): failed to open stream: No such file or directory in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php:327
+Stack trace:
+#0 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/o...', '/home/onlineget...', 327, Array)
+#1 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(327): require()
+#2 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(283): Illuminate\Routing\Router->loadRoutes('/home/onlineget...')
+#3 /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, '/home/onlineget...')
+#4 /home/onlineget/public_html/app/Providers/RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('/home/onlineget...')
+#5 /hom in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[05-Sep-2018 05:01:22 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required '/home/onlineget/public_html/routes/api.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/onlineget/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 327
+[08-Nov-2018 13:34:38 UTC] PHP Fatal error:  Cannot use App\Http\Requests\Request as Request because the name is already in use in /home/onlineget/public_html/app/Http/Controllers/Administrator/ProductController.php on line 20

@@ -1,0 +1,34 @@
+#b-icon{
+    font-size: 40px;
+}
+#c-icon{
+    font-size: 40px;
+}
+.input-group{
+	padding: 5px;
+}
+.image_preview {
+    cursor: pointer;
+    background: red;
+    white:200px;
+    height: 100px;
+    text-align: center;
+    padding: 35px;
+    font-size: 20px;
+    border: dashed 1px;
+}
+.remove-img{
+    position: absolute;
+    right: 3%;
+    top:29%;
+    font-style: normal; 
+    color: red;
+    cursor: pointer;
+    float: right;
+}
+  #offer_pr{
+            display: none;
+    }
+.cke_button__image_icon{
+    display:none !important;
+}
