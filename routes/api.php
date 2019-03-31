@@ -17,6 +17,35 @@ use Illuminate\Http\Request;
     return $request->user();
 });*/
 
+
+
+
+/* -------- API Version 2.0 -------- */
+
+
+// Route::group(['prefix' => 'v2.0'], function(){
+
+	Route::get('brands', 'Api\BrandController@index');
+
+	Route::get('discounts', 'Api\DiscountController@index');
+
+	Route::get('suppliers', 'Api\SupplierController@index');
+	Route::get('suppliers/{id}', 'Api\SupplierController@show');
+
+	Route::get('products/{skip?}', 'Api\ProductController@index');
+	Route::get('products/{id}', 'Api\ProductController@show');
+
+	Route::post('login', 'Api\UserController@login');
+	Route::post('register', 'Api\UserController@register');
+
+// });
+
+
+/* -------- END API Version 2.0 -------- */
+
+
+
+
 // testing for ournsarath
 Route::post('callback-v2', 'PaymentController@oursarathCallback');
 

@@ -29,4 +29,6 @@ class Brand extends Model
 			));
         }
     }
+    // version 2 code 
+    public $hidden = ['created_at', 'updated_at']; 
 }
