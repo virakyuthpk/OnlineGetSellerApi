@@ -13,10 +13,32 @@ class Product extends Model
 
     /* -------- code version v2.0 -------- */
 
-    public static function detail($id)
+    // attributes
+
+    protected $hidden = ['created_at', 'updated_at'];
+
+
+    //  relationships 
+
+    protected function user()
     {
-        return self::find($id);
+        return $this->belongsTo('App\User');
     }
+    protected function supplier()
+    {
+        return $this->belongsTo('App\Models\Supplier');
+    }
+    protected function unit()   
+    {
+        return $this->belongsTo('App\Models\Unit');
+    }
+    protected function brand()   
+    {
+        return $this->belongsTo('App\Models\Brand');
+    }
+
+    //  methods 
+
     public function statusAndOrder()
     {
         return $this->where('status', 1)->orderBy('created_at', 'desc');
@@ -25,8 +47,4 @@ class Product extends Model
     {
         return $this->where('status', 1)->orderBy('created_at', 'desc')->take(10)->skip($skip);
     }
-    // public function pagination($take)
-    // {
-    //     return $this->take($take);
-    // }
 }

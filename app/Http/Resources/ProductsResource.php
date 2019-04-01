@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
 
-class CategoryResource extends Resource
+class ProductsResource extends Resource
 {
     /**
      * Transform the resource into an array.
@@ -16,11 +16,9 @@ class CategoryResource extends Resource
     {
         // return parent::toArray($request);
         return [
-            'cateID' => (int) $this->id, 
-            'titleEn' => $this->title_en,
-            'titleKh' => $this->title_kh,
-            'icon' => asset('uploads/icon/' . $this->icon),
-            // 'banner' => $this->benner
-        ]; 
+            'productID' => (int) $this->id,
+            'productNameEn' => $this->name_en,
+            'featureImage' => asset('uploads/product/feature/'. $this->image)
+        ];
     }
 }

@@ -11,8 +11,11 @@ class BrandController extends Controller
 {
     public function index()
     {
-        return BrandResource::collection(
-            Brand::where('status', 1)->orderBy('created_at', 'desc')->get()
-        );
+        $data = Brand::where('status', 1)->orderBy('created_at', 'desc')->get();
+        return response()->json([
+            'success' => true, 
+            'data' => BrandResource::collection($data),
+            'message' => 'Here are brand list.'
+        ]);
     }
 }

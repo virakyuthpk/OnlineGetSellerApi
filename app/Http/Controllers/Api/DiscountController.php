@@ -11,8 +11,11 @@ class DiscountController extends Controller
 {
     public function index()
     {
-        return DiscountResource::collection(
-            Discount::where('status', 1)->orderBy('percentage', 'asc')->get()
-        );
+        $data = Discount::where('status', 1)->orderBy('percentage', 'asc')->get();
+        return response()->json([
+            'success' => true, 
+            'data' => DiscountResource::collection($data), 
+            'message' => 'Here are discount list.'
+        ]);
     }
 }

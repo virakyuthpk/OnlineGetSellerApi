@@ -2,29 +2,46 @@
 
 namespace App\Http\Controllers\Api;
 
+use Validator;
 use App\Models\Gallery;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProductResource;
+use App\Http\Resources\ProductsResource;
 
 class ProductController extends Controller
 {
     public function index(Product $product, $skip = 0)
     {
-        return ProductResource::collection(
+        return ProductsResource::collection(
             $product->statusAndOrderWithPaginate($skip)->get()
         );
     }
-    public function show($id, Product $product)
+    public function show(Product $product, $id)
     {
-        return new ProductResource(
-             $product->detail($id)
-        );
+        $product = $product->find($id);
+        if($product != null ){
+            ProductResource::withoutWrapping();
+            return [
+                'success' => true,
+                'data' => new ProductResource(
+                    $product
+               )
+            ];
+        }else{
+            return [
+                'message' => 'Product with your provided ID is not found.',
+                'success' => false
+            ];
+        }
+        
     }
-    public function store(Request $request)
+    public function store(Request $request, $id = null)
     {
         // mobile data
+        $variant_ids = array_map('intval', explode(',', $request->variant));
+
         $product_code = $request->product_code; 
         $category_id = $request->category_id; 
         $parent_category = $request->parent_category; 
@@ -42,8 +59,94 @@ class ProductController extends Controller
         $sell_price = $request->sell_price; 
         $model = $request->model; 
         $special = $request->special; 
-        $image = $filename = Gallery::uploadFile('/slideshow',$request->file('image'),$request->tmp_file);
+        $image = Gallery::uploadFile('/product/feature',$request->file('image'),$request->tmp_file);
         $max_order = $request->max_order; 
-        $status = $request->status; 
+        $status = $request->status;
+        
+        // validation
+        $messages = [
+            'required' => 'The :attribute field is required.',
+        ];
+        
+        $validator = Validator::make($request->all() ,
+            [
+                'pcode' => 'required|unique:products',
+                'category_id' => 'required',
+                'user_id' => 'required',
+                'brand_id' => 'required',
+                'supplier_id' => 'required',
+                'unit_id' => 'required',
+                'name_en' => 'required',
+                'sell_price' => 'required',
+                'max_order' => 'required',
+                
+            ], 
+            $messages
+        );
+        if($validator->fails()){
+            return response()->json([
+                'success' => false,
+                'data' => null, 
+                'message' => $validator->messages() 
+            ]);
+        }else{
+            if($id == null){
+                $product = new Product;
+                $product->pcode =  $product_code;
+                $product->category_id =  $category_id;
+                $product->parent_category =  $parent_category;
+                $product->user_id =  $user_id;
+                $product->sub_id =  $sub_id;
+                $product->braind_id =  $brand_id;
+                $product->supplier_id =  $supplier_id;
+                $product->unit_id =  $unit_id;
+                $product->name_en =  $name_en;
+                $product->name_kh =  $name_kh;
+                $product->detail_en =  $detail_en;
+                $product->detail_kh =  $detail_kh;
+                $product->des_en =  $des_en;
+                $product->des_kh =  $des_kh;
+                $product->sell_price =  $sell_price;
+                $product->model =  $model;
+                $product->special =  $special;
+                $product->image =  $image;
+                $product->max_order =  $max_order;
+                $product->status =  $status;
+                $product->save();
+                return  response()->json([
+                        'success' => true, 
+                        'data' => new ProductResource($product),
+                        'message' => 'You have successfully added new product.'
+                    ]);
+            }else{
+                $product =  Product::find($id);
+                $product->pcode =  $product_code;
+                $product->category_id =  $category_id;
+                $product->parent_category =  $parent_category;
+                $product->user_id =  $user_id;
+                $product->sub_id =  $sub_id;
+                $product->braind_id =  $brand_id;
+                $product->supplier_id =  $supplier_id;
+                $product->unit_id =  $unit_id;
+                $product->name_en =  $name_en;
+                $product->name_kh =  $name_kh;
+                $product->detail_en =  $detail_en;
+                $product->detail_kh =  $detail_kh;
+                $product->des_en =  $des_en;
+                $product->des_kh =  $des_kh;
+                $product->sell_price =  $sell_price;
+                $product->model =  $model;
+                $product->special =  $special;
+                $product->image =  $image;
+                $product->max_order =  $max_order;
+                $product->status =  $status;
+                $product->save();
+                return response()->json([
+                    'success' => true, 
+                    'data' => new ProductResource($product), 
+                    'message' => 'You have successfully updated product.'
+                ]);
+            }
+        }
     }
 }

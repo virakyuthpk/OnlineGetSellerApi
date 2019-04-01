@@ -23,22 +23,39 @@ use Illuminate\Http\Request;
 /* -------- API Version 2.0 -------- */
 
 
-// Route::group(['prefix' => 'v2.0'], function(){
+Route::group(['prefix' => 'v2.0'], function(){
 
+	// brand
 	Route::get('brands', 'Api\BrandController@index');
 
+	// discount
 	Route::get('discounts', 'Api\DiscountController@index');
 
+	// Unit 
+	Route::get('units', 'Api\UnitController@index');
+
+	// varient 
+	Route::get('varients', 'Api\VariantController@index');
+
+	// supplier 
 	Route::get('suppliers', 'Api\SupplierController@index');
-	Route::get('suppliers/{id}', 'Api\SupplierController@show');
+	Route::get('supplier/{id}', 'Api\SupplierController@show');
 
+	// category 
+	Route::get('parent-categories', 'Api\CategoryController@parentCategory'); 
+	Route::get('categories/{parent?}', 'Api\CategoryController@category'); 
+	Route::get('sub-categories/{parent_id?}/{cate_id?}', 'Api\CategoryController@subCategory'); 
+
+	// product
 	Route::get('products/{skip?}', 'Api\ProductController@index');
-	Route::get('products/{id}', 'Api\ProductController@show');
-
+	Route::get('product/{id}', 'Api\ProductController@show');
+	Route::post('product/{id?}', 'Api\ProductController@store');
+	
+	// user
 	Route::post('login', 'Api\UserController@login');
 	Route::post('register', 'Api\UserController@register');
 
-// });
+});
 
 
 /* -------- END API Version 2.0 -------- */

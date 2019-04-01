@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use Auth; 
-use App\User; 
+use App\User;
+use App\Models\Gallery;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -18,7 +19,7 @@ class UserController extends Controller
         $password = $request->password;
 
         $validator = Validator::make($request->all() ,
-            array('password' => 'required|min:8')
+            array('password' => 'required')
         );
         if($validator->fails()){
             return response()->json([
@@ -42,7 +43,7 @@ class UserController extends Controller
                         'email' => $user->email, 
                         'phone' => $user->phone, 
                         'role' => $user->role, 
-                        'image' => $user->image, 
+                        'image' => asset('uploads/users/' . $user->image), 
                         'address' => $user->address3,
                     ]);
                 }else{
@@ -67,7 +68,7 @@ class UserController extends Controller
                         'email' => $user->email, 
                         'phone' => $user->phone, 
                         'role' => $user->role, 
-                        'image' => $user->image, 
+                        'image' => asset('uploads/users/' . $user->image), 
                         'address' => $user->address3,
                     ]);
                 }else{
@@ -104,8 +105,8 @@ class UserController extends Controller
         $email = $request->email; 
         $phone = $request->phone; 
         $password = $request->password; 
-        $image = $request->image; 
-        $address = $request->address3; 
+        $image = Gallery::uploadFile('/users',$request->file('image'),$request->tmp_file); 
+        $address = $request->address; 
 
         $validator = Validator::make($request->all() ,[
             'username' => 'required',
@@ -140,7 +141,7 @@ class UserController extends Controller
                 'email' => $user->email, 
                 'phone' => $user->phone, 
                 'role' => $user->role, 
-                'image' => $user->image, 
+                'image' => asset('uploads/users/' . $user->image), 
                 'address' => $user->address3,
             ]; 
         }

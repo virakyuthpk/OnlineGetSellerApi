@@ -24,4 +24,25 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /* -------- Code version 2.0 -------- */ 
+
+    // attributes
+
+    // protected $hidden = ['created_at', 'updated_at'];
+
+
+    //  relationships 
+
+    protected function products()
+    {
+        return $this->hasMany('App\Models\Product');
+    }
+
+    // public function 
+    
+
+    //  methods 
+
+
 }

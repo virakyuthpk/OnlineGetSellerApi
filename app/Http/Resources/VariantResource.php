@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
 
-class VarientResource extends Resource
+class VariantResource extends Resource
 {
     /**
      * Transform the resource into an array.
@@ -14,6 +14,11 @@ class VarientResource extends Resource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        // return parent::toArray($request);
+        return [
+            'variantID' => (int) $this->id,
+            'nameEn' => $this->name_en,
+            'nameKh' => $this->name_kh
+        ];
     }
 }
