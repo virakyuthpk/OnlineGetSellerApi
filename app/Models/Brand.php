@@ -29,6 +29,17 @@ class Brand extends Model
 			));
         }
     }
-    // version 2 code 
+    /* -------- code version 2.0 -------- */
+    // attriutes 
+
     public $hidden = ['created_at', 'updated_at']; 
+
+    // relationships 
+
+    public function products()
+    {
+        return $this->hasMany('App\Models\Product', 'braind_id', 'id');
+    }
+
+    // methods 
 }

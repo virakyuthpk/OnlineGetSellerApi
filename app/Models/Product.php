@@ -34,7 +34,7 @@ class Product extends Model
     }
     protected function brand()   
     {
-        return $this->belongsTo('App\Models\Brand');
+        return $this->belongsTo('App\Models\Brand', 'braind_id');
     }
 
     //  methods 

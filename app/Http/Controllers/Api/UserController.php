@@ -120,7 +120,7 @@ class UserController extends Controller
                 'username' => 'N/A', 
                 'email' => 'N/A', 
                 'phone' => 'N/A', 
-                'role' => 'N/A', 
+                'role' => 'N/A',    
                 'image' => 'N/A', 
                 'address' => 'N/A',
             ]; 
@@ -132,7 +132,7 @@ class UserController extends Controller
             $user->image = $image; 
             $user->role = 'seller'; 
             $user->address3 = $address; 
-            $user->password = encrypt($password); 
+            $user->password = bcrypt($password); 
             $user->save();
             return [
                 'message' => 'You have registered new account successfully.',

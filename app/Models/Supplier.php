@@ -37,4 +37,19 @@ class Supplier extends Model
 			));
         }
     }
+
+    /* -------- code version 2.0 -------- */
+
+    // attrbutes 
+
+    protected $hidden = ['created_at' , 'updated_at']; 
+
+    // relationships 
+
+    public function products()
+    {
+        return $this->hasMany('App\Models\Product');
+    }
+
+    // methods
 }
