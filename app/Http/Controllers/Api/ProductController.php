@@ -42,7 +42,7 @@ class ProductController extends Controller
         // mobile data
         $variant_ids = array_map('intval', explode(',', $request->variant));
 
-        $product_code = $request->product_code; 
+        $pcode = $request->pcode; 
         $category_id = $request->category_id; 
         $parent_category = $request->parent_category; 
         $user_id = $request->user_id; 
@@ -59,10 +59,9 @@ class ProductController extends Controller
         $sell_price = $request->sell_price; 
         $model = $request->model; 
         $special = $request->special; 
-        $image = Gallery::uploadFile('/product/feature',$request->file('image'),$request->tmp_file);
+        // $image = Gallery::uploadFile('/product/feature',$request->file('image'),$request->tmp_file);
         $max_order = $request->max_order; 
         $status = $request->status;
-        
         // validation
         $messages = [
             'required' => 'The :attribute field is required.',
@@ -70,7 +69,8 @@ class ProductController extends Controller
         
         $validator = Validator::make($request->all() ,
             [
-                'pcode' => 'required|unique:products',
+                // 'pcode' => 'required|unique:products',
+                'pcode' => 'required',
                 'category_id' => 'required',
                 'user_id' => 'required',
                 'brand_id' => 'required',
@@ -92,7 +92,7 @@ class ProductController extends Controller
         }else{
             if($id == null){
                 $product = new Product;
-                $product->pcode =  $product_code;
+                $product->pcode =  $pcode;
                 $product->category_id =  $category_id;
                 $product->parent_category =  $parent_category;
                 $product->user_id =  $user_id;
@@ -109,10 +109,24 @@ class ProductController extends Controller
                 $product->sell_price =  $sell_price;
                 $product->model =  $model;
                 $product->special =  $special;
-                $product->image =  $image;
+                // $product->image =  $image;
                 $product->max_order =  $max_order;
                 $product->status =  $status;
                 $product->save();
+                 //  picture
+                 $file_array = array();
+                 if($request->has('image')){
+                     foreach($request->file('image') as $image)
+                     {
+                         $fileName = Gallery::uploadFile('/product/photoalbum',$image,$request->tmp_file);
+                         $file = new Gallery;
+                        //  $file->image =$fileName ;
+                         $file->path = url('uploads/product/photoalbum').'/'.$fileName;
+                         $file->galleryable_id = $product->id;
+                         $file->galleryable_type= 'Product';
+                         $file->save();
+                     }
+                 }
                 return  response()->json([
                         'success' => true, 
                         'data' => new ProductResource($product),

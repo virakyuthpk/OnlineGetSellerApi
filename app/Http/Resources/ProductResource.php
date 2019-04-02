@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use App\Models\Category; 
+use App\Models\Gallery; 
 use Illuminate\Http\Resources\Json\Resource;
 
 class ProductResource extends Resource
@@ -18,6 +19,7 @@ class ProductResource extends Resource
         $parentCate = Category::find($this->parent_category);
         $subCate = Category::find($this->sub_id);
         $category = Category::find($this->category_id);
+        $image = Gallery::where('galleryable_id', $this->id)->where('galleryable_type', 'Product')->first();
         return [
             'productID' => (int) $this->id,
             'productCode' => $this->pcode,
@@ -38,7 +40,7 @@ class ProductResource extends Resource
             'maximunOrder' => $this->max_order,
             'productNameEn' => $this->name_en,
             'productNameKh' => $this->name_kh,
-            'featureImage' => asset('uploads/product/feature/'. $this->image)
+            'featureImage' => $this->image?asset('uploads/product/feature/'. $this->image): ''. $image->path
         ];
     }
 }
