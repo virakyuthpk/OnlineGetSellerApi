@@ -11,11 +11,6 @@ class UnitController extends Controller
 {
     public function index()
     {
-        $data = Unit::where('status', 1)->get();
-        return response()->json([
-            'success' => true,
-            'data' => UnitResource::collection($data),
-            'message' => 'Here are the unit list.'
-        ]);
+        return UnitResource::collection(Unit::where('status', 1)->get());
     }
 }

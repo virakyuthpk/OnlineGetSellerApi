@@ -11,12 +11,9 @@ class SupplierController extends Controller
 {
     public function index()
     {
-        $data = Supplier::where('status',1)->orderBy('id', 'asc')->get();
-        return response()->json([
-            'success' => true, 
-            'data' => SupplierResource::collection($data),
-            'message' => 'Here are the supplier list.'
-        ]);
+        return SupplierResource::collection(
+            Supplier::where('status',1)->orderBy('id', 'asc')->get()
+        );
     }
     public function show($id)
     {

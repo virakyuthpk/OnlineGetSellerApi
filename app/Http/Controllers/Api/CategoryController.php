@@ -11,22 +11,16 @@ class CategoryController extends Controller
 {
     public function parentCategory()
     {
-        $data = Category::where('parent_id', 0)->where('sub_id', 0)->get();
-        return response()->json([
-            'success' => true,
-            'data' => CategoryResource::collection($data), 
-            'message' => 'Here are the parent category list.'
-        ]);
+        return CategoryResource::collection(
+                Category::where('parent_id', 0)->where('sub_id', 0)->get()
+            );
     }
     public function category($parent_id = 0)
     {
         if($parent_id != 0){
-            $data = Category::where('parent_id', $parent_id)->where('sub_id', 0)->get();
-            return response()->json([
-                'success' => true,
-                'data' => CategoryResource::collection($data), 
-                'message' => 'Here are the category list.'
-            ]);
+            return CategoryResource::collection(
+                Category::where('parent_id', $parent_id)->where('sub_id', 0)->get()
+            );
         }else{
             return response()->json([
                 'success' => false,
@@ -39,12 +33,9 @@ class CategoryController extends Controller
     public function subCategory($parent_id = 0 , $cate_id = 0)
     {
         if( $parent_id != 0 && $cate_id != 0){
-            $data = Category::where('parent_id',$parent_id)->where('sub_id', $cate_id)->get();
-            return response()->json([
-                'success' => true,
-                'data' => CategoryResource::collection($data), 
-                'message' => 'Here are the sub category list.'
-            ]);
+            return CategoryResource::collection(
+                Category::where('parent_id',$parent_id)->where('sub_id', $cate_id)->get()
+            );
         }else{
             return response()->json([
                 'success' => false,

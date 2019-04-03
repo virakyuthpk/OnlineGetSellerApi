@@ -11,11 +11,6 @@ class VariantController extends Controller
 {
     public function index()
     {
-        $data = Variant::where('status', 1)->get();
-        return response()->json([
-            'success' => true, 
-            'data' => VariantResource::collection($data), 
-            'message' => 'Here are variant list.'
-        ]);
+        return VariantResource::collection(Variant::where('status', 1)->get());
     }
 }

@@ -23,12 +23,9 @@ class ProductController extends Controller
         $product = $product->find($id);
         if($product != null ){
             ProductResource::withoutWrapping();
-            return [
-                'success' => true,
-                'data' => new ProductResource(
+            return new ProductResource(
                     $product
-               )
-            ];
+               );
         }else{
             return [
                 'message' => 'Product with your provided ID is not found.',
@@ -127,11 +124,7 @@ class ProductController extends Controller
                          $file->save();
                      }
                  }
-                return  response()->json([
-                        'success' => true, 
-                        'data' => new ProductResource($product),
-                        'message' => 'You have successfully added new product.'
-                    ]);
+                return  new ProductResource($product);
             }else{
                 $product =  Product::find($id);
                 $product->pcode =  $product_code;
@@ -155,11 +148,7 @@ class ProductController extends Controller
                 $product->max_order =  $max_order;
                 $product->status =  $status;
                 $product->save();
-                return response()->json([
-                    'success' => true, 
-                    'data' => new ProductResource($product), 
-                    'message' => 'You have successfully updated product.'
-                ]);
+                return new ProductResource($product);
             }
         }
     }
