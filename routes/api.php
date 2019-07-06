@@ -271,3 +271,53 @@ Route::group([
         Route::get('login/google/callback', 'LoginApiController@handleGoogleCallback');
     });
 });
+
+/*online user v3*/
+
+Route::post('v3/login', 'Api\User\UserController@login');
+Route::post('v3/register', 'API\UserController@register');
+Route::post('v3/user-login', 'API\UserController@userlogin');
+
+/*user login*/
+
+Route::post('v3/user-login', 'API\UserController@userlogin');
+
+Route::group([
+    'middleware' => 'auth:api',
+    'prefix'    => 'v3',
+    'namespace' => '\Api\User'
+], function(){ 
+	Route::get('slide', 'SlideController@index');
+	Route::get('category', 'CategoryController@index');
+	Route::get('sub-category/{category_id?}', 'SubcategoryController@index');
+
+	/*product*/
+	Route::get('product/{skip?}', 'ProductController@index');
+   	Route::get('search/{skip?}', 'ProductController@search');
+   	Route::get('product-detail/{product_id}', 'ProductController@detail');
+   	Route::get('product-category/{sub_category?}/{skip?}', 'ProductController@productcategory');
+   	/*change password*/
+   	Route::post('change-password', 'UserController@changePassword');
+
+  	/*change profile*/
+  	Route::post('change-profile', 'UserController@changeProfile');
+
+  	Route::get('vendor', 'VendorController@index');
+  	Route::get('vendor-detail/{vendor_id?}/{skip?}', 'VendorController@detail');
+
+  	/*product popular*/
+  	Route::get('popular', 'ProductController@popular');
+
+  	Route::get('collection', 'AdvertiseController@index');
+});
+
+/*saller*/
+
+Route::post('v4/login', 'Api\Saller\UserController@login');
+Route::get('v4/product/{user_id}/{skip?}', 'Api\Saller\ProductController@index');
+Route::get('v4/product-pending/{user_id}/{skip?}', 'Api\Saller\ProductController@pendding');
+Route::get('v4/product-shipping/{user_id}/{skip?}', 'Api\Saller\ProductController@shipping');
+Route::get('v4/product-delivery/{user_id}/{skip?}', 'Api\Saller\ProductController@delivery');
+Route::get('v4/product-cancel/{user_id}/{skip?}', 'Api\Saller\ProductController@cancel');
+Route::get('v4/order-report/{user_id}', 'Api\Saller\ProductController@orderreport');
+Route::get('v4/shop-detail/{user_id}', 'Api\Saller\ShopController@index');
