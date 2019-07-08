@@ -117,7 +117,7 @@ class UserController extends Controller
             $user->phone = $phone; 
             $user->image = $image; 
             $user->role = 'seller'; 
-            $user->address3 = $address; 
+            $user->address = $address; 
             $user->password = bcrypt($password); 
             $user->save();
             return [
@@ -128,9 +128,37 @@ class UserController extends Controller
                 'phone' => $user->phone, 
                 'role' => $user->role, 
                 'image' => asset('uploads/users/' . $user->image), 
-                'address' => $user->address3,
+                'address' => $user->address,
             ]; 
         }
         
+    }
+    public function profile(Request $request)
+    {
+        $user = User::where('id',$request->user_id)->select('id','username','email','phone','address','image_path')->first();
+        return response()->json([
+            'success' => true,
+            'data' => $user
+        ]); 
+    }
+    public function changeProfile(Request $request)
+    {
+        $user = User::where('id',$request->user_id)->first();
+        if($request->username)
+            $user->username = $request->username;
+        if($request->phone)
+            $user->phone = $request->phone;
+        if($request->email)
+            $user->email = $request->email;
+        if($request->has('image')){
+            $filename = GalleryUnique::uploadFile('/users',$request->file('image'),$request->tmp_file);
+            $user->image = $filename;
+            $user->path = url('uploads/users/').'/'.$filename;
+        }
+        $user->save();
+         return ([
+            'success' => true,
+            'data' => $user
+        ]);
     }
 }

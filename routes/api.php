@@ -321,3 +321,9 @@ Route::get('v4/product-delivery/{user_id}/{skip?}', 'Api\Saller\ProductControlle
 Route::get('v4/product-cancel/{user_id}/{skip?}', 'Api\Saller\ProductController@cancel');
 Route::get('v4/order-report/{user_id}', 'Api\Saller\ProductController@orderreport');
 Route::get('v4/shop-detail/{user_id}', 'Api\Saller\ShopController@index');
+Route::get('v4/about', 'Api\Saller\PageController@about');
+Route::get('v4/term', 'Api\Saller\PageController@term');
+
+/*saller profile*/
+Route::get('v4/profile/{user_id?}', 'Api\Saller\UserController@profile');
+Route::get('v4/change-profile/{user_id?}', 'Api\Saller\UserController@changeProfile');
