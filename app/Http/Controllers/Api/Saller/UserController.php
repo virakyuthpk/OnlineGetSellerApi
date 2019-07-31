@@ -22,9 +22,7 @@ class UserController extends Controller
         if($validator->fails()){
             return response()->json([
                 'message' => 'Authenticate fails',
-                'username' => 'N/A', 
-                'phone' => 'N/A', 
-                'image' => 'N/A', 
+                'user_id' => 'N/A', 
             ]);
         }else{
             if($request->has('phone') && $request->has('password') && $request->phone != null){
@@ -32,53 +30,34 @@ class UserController extends Controller
                     $user = Auth::user();
                     return response()->json([
                         'message' => 'You have logined successfully.',
-                        'username' => $user->username,  
-                        'phone' => $user->phone,  
-                        'image' => asset('uploads/users/' . $user->image)
+                        'user_id' => $user->id,  
                     ]);
                 }else{
                     return response()->json([
                         'message' => 'Your phone or password is incorrect.',
-                        'username' => 'N/A', 
-                        'phone' => 'N/A',  
-                        'image' => 'N/A', 
+                        'user_id' => 'N/A', 
                     ]);
                 }
             }else if($request->has('email') && $request->has('password') && $request->email != null){
-                if(Auth::attempt(['email' => $email , 'password' => $password])){
+                if(Auth::attempt(['email' => $request->email , 'password' => $password])){
                     $user = Auth::user();
                     return response()->json([
                         'message' => 'You have logined successfully.',
                         'code' => 200,
-                        'username' => $user->username, 
-                        'email' => $user->email, 
-                        'phone' => $user->phone, 
-                        'role' => $user->role, 
-                        'image' => asset('uploads/users/' . $user->image), 
-                        'address' => $user->address3,
+                        'user_id' => $user->id, 
                     ]);
                 }else{
                     return response()->json([
                         'message' => 'Your email/phone or password is incorrect.',
                         'code' => 204,
-                        'username' => 'N/A', 
-                        'email' => 'N/A', 
-                        'phone' => 'N/A', 
-                        'role' => 'N/A', 
-                        'image' => 'N/A', 
-                        'address' => 'N/A',
+                        'user_id' => 'N/A', 
                     ]);
                 }
             }else{
                 return response()->json([
                     'message' => 'Please provide credential to login',
                     'code' => 204,
-                    'username' => 'N/A', 
-                    'email' => 'N/A', 
-                    'phone' => 'N/A', 
-                    'role' => 'N/A', 
-                    'image' => 'N/A', 
-                    'address' => 'N/A',
+                    'user_id' => 'N/A', 
                 ]);
             }
         }
@@ -91,7 +70,6 @@ class UserController extends Controller
         $email = $request->email; 
         $phone = $request->phone; 
         $password = $request->password; 
-        $image = Gallery::uploadFile('/users',$request->file('image'),$request->tmp_file); 
         $address = $request->address; 
 
         $validator = Validator::make($request->all() ,[
@@ -102,33 +80,19 @@ class UserController extends Controller
         if($validator->fails()){
             return [
                 'message' => 'You failed to register new account.',
-                'code' => 204,
-                'username' => 'N/A', 
-                'email' => 'N/A', 
-                'phone' => 'N/A', 
-                'role' => 'N/A',    
-                'image' => 'N/A', 
-                'address' => 'N/A',
+                'user_id' => 'N/A', 
             ]; 
         }else{
             $user = new User; 
             $user->username = $username; 
-            $user->email = $email; 
             $user->phone = $phone; 
-            $user->image = $image; 
             $user->role = 'seller'; 
             $user->address = $address; 
             $user->password = bcrypt($password); 
             $user->save();
             return [
                 'message' => 'You have registered new account successfully.',
-                'code' => 200,
-                'username' => $user->username, 
-                'email' => $user->email, 
-                'phone' => $user->phone, 
-                'role' => $user->role, 
-                'image' => asset('uploads/users/' . $user->image), 
-                'address' => $user->address,
+                'user_id' => $user->id, 
             ]; 
         }
         
@@ -148,6 +112,10 @@ class UserController extends Controller
             $user->username = $request->username;
         if($request->phone)
             $user->phone = $request->phone;
+        if($request->address)
+            $user->address = $request->address;
+        if($request->bio)
+            $user->bio = $request->bio;
         if($request->email)
             $user->email = $request->email;
         if($request->has('image')){

@@ -275,12 +275,20 @@ Route::group([
 /*online user v3*/
 
 Route::post('v3/login', 'Api\User\UserController@login');
-Route::post('v3/register', 'API\UserController@register');
-Route::post('v3/user-login', 'API\UserController@userlogin');
+Route::post('v3/register', 'Api\User\UserController@register');
+Route::post('v3/user-login', 'Api\User\UserController@userlogin');
+
+Route::post('v3/favorite', 'Api\User\FavoriteController@store');
+Route::post('v3/remove', 'Api\User\FavoriteController@delete');
+Route::get('v3/list', 'Api\User\FavoriteController@index');
+
+Route::post('v3/cart', 'Api\User\AddtocartController@store');
+Route::post('v3/remove-cart', 'Api\User\AddtocartController@delete');
+Route::get('v3/list-cart', 'Api\User\AddtocartController@index');
 
 /*user login*/
 
-Route::post('v3/user-login', 'API\UserController@userlogin');
+Route::post('v3/user-login', 'Api\User\UserController@userlogin');
 
 Route::group([
     'middleware' => 'auth:api',
@@ -309,21 +317,37 @@ Route::group([
   	Route::get('popular', 'ProductController@popular');
 
   	Route::get('collection', 'AdvertiseController@index');
+  	Route::get('help', 'HelpController@index');
+  	Route::get('help-detail/{id?}', 'HelpController@detail');
+  	Route::get('policy', 'PageController@index');
 });
+
 
 /*saller*/
 
-Route::post('v4/login', 'Api\Saller\UserController@login');
-Route::get('v4/product/{user_id}/{skip?}', 'Api\Saller\ProductController@index');
-Route::get('v4/product-pending/{user_id}/{skip?}', 'Api\Saller\ProductController@pendding');
-Route::get('v4/product-shipping/{user_id}/{skip?}', 'Api\Saller\ProductController@shipping');
-Route::get('v4/product-delivery/{user_id}/{skip?}', 'Api\Saller\ProductController@delivery');
-Route::get('v4/product-cancel/{user_id}/{skip?}', 'Api\Saller\ProductController@cancel');
-Route::get('v4/order-report/{user_id}', 'Api\Saller\ProductController@orderreport');
-Route::get('v4/shop-detail/{user_id}', 'Api\Saller\ShopController@index');
-Route::get('v4/about', 'Api\Saller\PageController@about');
-Route::get('v4/term', 'Api\Saller\PageController@term');
+Route::group([
+    'middleware' => 'auth:api',
+    'prefix'    => 'v4',
+    'namespace' => '\Api\Saller'
+], function(){ 
+	Route::post('register', 'UserController@register');
+	Route::post('login', 'UserController@login');
+	Route::get('product/{user_id}/{skip?}', 'ProductController@index');
+	Route::get('product-pending/{user_id}/{skip?}', 'ProductController@pendding');
+	Route::get('product-shipping/{user_id}/{skip?}', 'ProductController@shipping');
+	Route::get('product-delivery/{user_id}/{skip?}', 'ProductController@delivery');
+	Route::get('product-cancel/{user_id}/{skip?}', 'ProductController@cancel');
+	Route::get('order-report/{user_id}', 'ProductController@orderreport');
+	Route::get('shop-detail/{user_id}', 'ShopController@index');
+	Route::get('about', 'PageController@about');
+	Route::get('term', 'PageController@term');
 
-/*saller profile*/
-Route::get('v4/profile/{user_id?}', 'Api\Saller\UserController@profile');
-Route::get('v4/change-profile/{user_id?}', 'Api\Saller\UserController@changeProfile');
+	/*report */
+
+	Route::get('product-report/{user_id}', 'ProductController@preport');
+
+	/*saller profile*/
+	Route::get('profile/{user_id?}', 'UserController@profile');
+	Route::get('change-profile/{user_id?}', 'UserController@changeProfile');
+	Route::post('change-password', 'UserController@changePassword');
+});

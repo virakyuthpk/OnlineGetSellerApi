@@ -30,7 +30,7 @@ class VendorController extends Controller
             'data' => $vendor
         ]);
     }
-    public function detail($id,$skip = 0)
+    public function detail(Request $request,$skip = 0)
     {
     	$vendor = Vendors::where('id',$id)->select('shop_name','pic','shop_cover')->first();
 

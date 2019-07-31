@@ -111,5 +111,12 @@ class ProductController extends Controller
             'cancel' => $cancel
         ]);
     }
-
+    public function preport(Request $request)
+    {
+        $instock = Product::where('user_id',$request->user_id)->where('qty','>',10)->sum('qty');
+        return response()->json([
+            'success' => true,
+            'instock' => $instock
+        ]);
+    }
 }

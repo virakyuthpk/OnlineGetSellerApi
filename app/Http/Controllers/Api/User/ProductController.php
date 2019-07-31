@@ -92,4 +92,39 @@ class ProductController extends Controller
             'data' => $popular
         ]);
     }
+    public function postorder(Request $request)
+    {
+        $arr = array(
+            'user_id' => $request->user_id,
+            'qty' => $request->qty, 
+            'product_id' => $request->product_id,
+            'amount' => $request->amount,
+            'f_name' => $request->f_name,
+            'l_name' => $request->l_name,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            );
+        $order = new Orders($arr);
+        $order->save();
+
+        return ([
+            'success' => true,
+            'data' => 'Your order success'
+        ]);
+    }
+    public function myorder(Request $request)
+    {
+        $product = Product::select('*')->join('orders', 'products.id', 'orders.product_id')
+                    ->where('orders.user_id', $request->user_id)
+                    ->select('orders.product_id','products.name_en','products.name_kh','products.image','products.id')
+                    ->get();
+
+        foreach ($product as  $p) {
+            $p->path = $p->image? $this->URL.'/uploads/product/feature/'.$p->image : $this->URL . '/uploads/default-img.jpg';
+        }
+        return response()->json([
+            'success' => true,
+            'data' => $product
+        ]);
+    }
 }
