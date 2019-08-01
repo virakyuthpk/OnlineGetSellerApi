@@ -29,7 +29,7 @@ class ProductController extends Controller
             'data' => $product
         ]);
     }
-    public function pending (Request $request, $skip = 0)
+    public function pendding (Request $request, $skip = 0)
     {
     	$order = Orders::where('shop_id',$request->user_id)->where('stage','Pending ')->select('product_id')->get();
 
@@ -111,12 +111,5 @@ class ProductController extends Controller
             'cancel' => $cancel
         ]);
     }
-    public function preport(Request $request)
-    {
-        $instock = Product::where('user_id',$request->user_id)->where('qty','>',10)->sum('qty');
-        return response()->json([
-            'success' => true,
-            'instock' => $instock
-        ]);
-    }
+
 }

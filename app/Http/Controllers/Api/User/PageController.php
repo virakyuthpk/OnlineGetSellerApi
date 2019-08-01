@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function index()
     {
-    	$policy = Page::first(7);
+    	$policy = Page::where('id',7)->select('title_en','des_en')->first();
         return response()->json([
             'success' => true,
             'data' => $policy

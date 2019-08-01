@@ -12,7 +12,7 @@ class ShopController extends Controller
     public function index(Request $request)
     {
     	$shop = Vendors::where('user_id',$request->user_id)->select('id','shop_name','email','phone','address','detail')->first();
-
+        
     	$shop->logo  = $shop->pic? $this->URL.'/uploads/vendor/'.$shop->pic : $this->URL . '/uploads/default-img.jpg';
     	
     	$shop->cover  = $shop->shop_cover? $this->URL.'/uploads/vendor/'.$shop->shop_cover : $this->URL . '/uploads/default-img.jpg';

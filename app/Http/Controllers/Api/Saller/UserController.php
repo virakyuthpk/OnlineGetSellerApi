@@ -8,6 +8,7 @@ use Validator;
 use App\Models\Gallery;
 use Auth;
 use App\User;
+use Hash;
 class UserController extends Controller
 {
     public function login(Request $request)
@@ -15,7 +16,8 @@ class UserController extends Controller
         // mobile data 
         $phone = $request->phone;
         $password = $request->password;
-
+        $user = Auth::user(); 
+        $token =  $user->createToken('MyApp')-> accessToken; 
         $validator = Validator::make($request->all() ,
             array('password' => 'required')
         );
@@ -23,6 +25,7 @@ class UserController extends Controller
             return response()->json([
                 'message' => 'Authenticate fails',
                 'user_id' => 'N/A', 
+                'token'=> 'N/A'
             ]);
         }else{
             if($request->has('phone') && $request->has('password') && $request->phone != null){
@@ -31,11 +34,13 @@ class UserController extends Controller
                     return response()->json([
                         'message' => 'You have logined successfully.',
                         'user_id' => $user->id,  
+                        'token'=>$token
                     ]);
                 }else{
                     return response()->json([
                         'message' => 'Your phone or password is incorrect.',
                         'user_id' => 'N/A', 
+                        'token'=> 'N/A'
                     ]);
                 }
             }else if($request->has('email') && $request->has('password') && $request->email != null){
@@ -44,13 +49,15 @@ class UserController extends Controller
                     return response()->json([
                         'message' => 'You have logined successfully.',
                         'code' => 200,
-                        'user_id' => $user->id, 
+                        'user_id' => $user->id,
+                        'token'=>$token
                     ]);
                 }else{
                     return response()->json([
                         'message' => 'Your email/phone or password is incorrect.',
                         'code' => 204,
                         'user_id' => 'N/A', 
+                        'token'=> 'N/A'
                     ]);
                 }
             }else{
@@ -58,6 +65,7 @@ class UserController extends Controller
                     'message' => 'Please provide credential to login',
                     'code' => 204,
                     'user_id' => 'N/A', 
+                    'token'=> 'N/A'
                 ]);
             }
         }
@@ -119,14 +127,150 @@ class UserController extends Controller
         if($request->email)
             $user->email = $request->email;
         if($request->has('image')){
-            $filename = GalleryUnique::uploadFile('/users',$request->file('image'),$request->tmp_file);
+            $filename = Gallery::uploadFile('/users',$request->file('image'),$request->tmp_file);
             $user->image = $filename;
-            $user->path = url('uploads/users/').'/'.$filename;
+            $user->image_path = url('uploads/users/').'/'.$filename;
         }
         $user->save();
          return ([
             'success' => true,
             'data' => $user
         ]);
+    }
+     public function changePassword(Request $request)
+    {
+        $user = User::find($request->user_id);
+        if (!(Hash::check($request->get('current_password'), $user->password))) {
+            return ([
+                'success' => false,
+                'data' => 'Your current password does not matches with the password you provided. Please try again.'
+            ]);
+        }
+        if(strcmp($request->get('current_password'), $request->get('new_password')) == 0){
+            return ([
+                'success' => false,
+                'data' => 'New Password cannot be same as your current password. Please choose a different password.'
+            ]);
+        }
+        //Change Password
+        $user = User::find($request->user_id);
+        $user->password = bcrypt($request->get('new_password'));
+        $user->save();
+        return ([
+            'success' => true,
+            'data' => 'Password changed successfully !'
+        ]);
+    }
+    public function userlogin(Request $request)
+    {
+        $phone = $request->phone;
+        $password = $request->password;
+
+        $validator = Validator::make($request->all() ,
+            array('password' => 'required')
+        );
+        if($validator->fails()){
+            return response()->json([
+                'message' => 'Authenticate fails',
+                'success' => false,
+                'username' => 'N/A', 
+                'phone' => 'N/A', 
+                'path' => 'N/A', 
+                'user_id' => 'N/A', 
+            ]);
+        }else{
+            if($request->has('phone') && $request->has('password') && $request->phone != null){
+                if(Auth::attempt(['phone' => $phone , 'password' => $password])){
+                    $user = Auth::user();
+                    return response()->json([
+                        'message' => 'You have logged in successfully.',
+                        'success' => true,
+                        'username' => $user->username,
+                        'phone' => $user->phone,
+                        'path' => $user->image_path,
+                        'user_id' => $user->id
+                    ]);
+                }else{
+                    return response()->json([
+                        'message' => 'Your phone or password is incorrect.',
+                        'success' => false,
+                        'username' => 'N/A', 
+                        'phone' => 'N/A', 
+                        'path' => 'N/A', 
+                        'user_id' => 'N/A',  
+                    ]);
+                }
+            }else if($request->has('email') && $request->has('password') && $request->email != null){
+                if(Auth::attempt(['email' => $email , 'password' => $password])){
+                    $user = Auth::user();
+                    return response()->json([
+                        'message' => 'You have logged in successfully.',
+                        'success' => true,
+                        'username' => $user->username,
+                        'phone' => $user->phone,
+                        'path' => $user->image_path,
+                        'user_id' => $user->id
+                    ]);
+                }else{
+                    return response()->json([
+                        'message' => 'Your email/phone or password is incorrect.',
+                        'success' => false,
+                        'username' => 'N/A', 
+                        'phone' => 'N/A', 
+                        'path' => 'N/A', 
+                        'user_id' => 'N/A', 
+                    ]);
+                }
+            }else{
+                return response()->json([
+                    'message' => 'Please provide credential to login',
+                    'success' => false,
+                    'username' => 'N/A', 
+                    'email' => 'N/A', 
+                    'phone' => 'N/A', 
+                    'path' => 'N/A', 
+                    'user_id' => 'N/A',
+                ]);
+            }
+        }
+        /*$validator = Validator::make($request->all(), [ 
+            'phone' => 'required', 
+            'password' => 'required',
+        ]);
+        if ($validator->fails()) { 
+            return response()->json(['error'=>$validator->errors()], 401);            
+        }else{
+            $user = User::where('phone',$request->phone)->select('id','name','phone','path')->first();
+            if (Auth::loginUsingId($user->id)) {
+                return response()->json([
+                    'message' => 'You have logged in successfully.',
+                    'success' => true,
+                    'username' => $user->name,
+                    'phone' => $user->phone,
+                    'path' => $user->path,
+                    'user_id' => $user->id
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'Your provided credentials are incorrect',
+                    'success' => false
+                ]);
+            }
+        }*/
+        /*$user = User::where('phone',$request->phone)->select('id','name','phone','path')->first();
+        if (Auth::loginUsingId($user->id)) {
+            return response()->json([
+                'message' => 'You have logged in successfully.',
+                'success' => true,
+                'username' => $user->name,
+                'phone' => $user->phone,
+                'path' => $user->path
+            ]);
+        }else{
+            return response()->json([
+                'message' => 'Your provided credentials are incorrect',
+                'success' => false
+            ]);
+        }*/
     }
 }

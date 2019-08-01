@@ -19,10 +19,10 @@ class VendorController extends Controller
     	foreach ($vendor as  $ven) {
     		$ven->logo = $ven->pic? $this->URL.'/uploads/vendor/'.$ven->pic : $this->URL . '/uploads/default-img.jpg';
 
-    		$ven->product = Product::where('user_id',$ven->user_id)->select('id','name_en')->orderBy('id','desc')->limit(3)->get();
+    		$ven->product = Product::where('user_id',$ven->user_id)->select('id','name_en','image')->orderBy('id','desc')->limit(3)->get();
 
     		foreach ($ven->product as $venp) {
-    			$venp->path = $venp->pic? $this->URL.'/uploads/vendor/'.$venp->pic : $this->URL . '/uploads/default-img.jpg';
+    			$venp->path = $venp->image? $this->URL.'/uploads/vendor/'.$venp->image : $this->URL . '/uploads/default-img.jpg';
     		}
     	}
     	return response()->json([
@@ -30,18 +30,18 @@ class VendorController extends Controller
             'data' => $vendor
         ]);
     }
-    public function detail(Request $request,$skip = 0)
+    public function detail(Request $request)
     {
-    	$vendor = Vendors::where('id',$id)->select('shop_name','pic','shop_cover')->first();
+    	$vendor = Vendors::where('id',$request->vendor_id)->select('shop_name','pic','shop_cover')->first();
 
     	$vendor->logo = $vendor->pic? $this->URL.'/uploads/vendor/'.$vendor->pic : $this->URL . '/uploads/default-img.jpg';
 
     	$vendor->banner = $vendor->shop_cover? $this->URL.'/uploads/vendor/'.$vendor->shop_cover : $this->URL . '/uploads/default-img.jpg';
 
-    	$vendor->product = Product::where('user_id',$vendor->user_id)->select('id','name_en','sell_price','image')->orderBy('id','desc')->skip($skip)->take(10)->get();
+    	$vendor->product = Product::where('user_id',$vendor->user_id)->select('id','name_en','sell_price','image')->orderBy('id','desc')->paginate(10);
 
     	foreach ($vendor->product as $venp) {
-    		$venp->path = $venp->image? $this->URL.'/uploads/vendor/'.$venp->image : $this->URL . '/uploads/default-img.jpg';
+    		$venp->path = $venp->image? $this->URL.'/uploads/product/feature/'.$venp->image : $this->URL . '/uploads/default-img.jpg';
     		}
     	return response()->json([
             'success' => true,

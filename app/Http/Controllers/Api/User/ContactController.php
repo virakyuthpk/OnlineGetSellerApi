@@ -9,7 +9,7 @@ class ContactController extends Controller
 {
     public function index(Request $request)
     {
-    	$contact = Address::where('status',1)->select('id','phone','phone1')->get();
+    	$contact = Address::select('id','phone','phone1')->get();
         return response()->json([
             'success' => true,
             'data' => $contact
