@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Gallery;
 use App\Models\Orders;
 use DB;
+use App\Models\Vendors;
 class ProductController extends Controller
 {
 	public $URL = 'https://onlineget.com';
@@ -114,7 +115,20 @@ class ProductController extends Controller
     }
     public function myorder(Request $request)
     {
-        $product = Product::select('*')->join('orders', 'products.id', 'orders.product_id')
+         $order = Order::where('user_id',$request->user_id)->where('id',$request->order_id)->select('id')->first();
+        
+         $product = DB::table('product_orders')->join('products', 'products.id', '=', 'product_orders.product_id')->whereIn('product_orders.order_id',$order)->select('products.id','products.name_en','products.path','products.price','product_orders.qty','products.user_id')->get();
+
+        foreach ($product as  $p) {
+            $p->path = $p->image? $this->URL.'/uploads/product/feature/'.$p->image : $this->URL . '/uploads/default-img.jpg';
+            $p->shope_name = Vendorsa::where('user_id',$p->user_id)->first()->shop_name;
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $product
+        ]);
+        /*$product = Product::select('*')->join('orders', 'products.id', 'orders.product_id')
                     ->where('orders.user_id', $request->user_id)
                     ->select('orders.product_id','products.name_en','products.name_kh','products.image','products.id')
                     ->get();
@@ -125,6 +139,6 @@ class ProductController extends Controller
         return response()->json([
             'success' => true,
             'data' => $product
-        ]);
+        ]);*/
     }
 }
