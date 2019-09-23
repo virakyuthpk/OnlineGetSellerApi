@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Downloads/GooglePlusDemo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/SO_TabLayoutDemo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/TabLayoutAdapter-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/android-retrofit-video-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/morph-bottom-navigation-master/morph-bottom-navigation-sample" value="PREVIEW" />
+        <entry key="/media/yuth/188AC1C98AC1A41A/Users/Asus-ROG-GL552VX/Downloads/material-components-android-codelabs-101-starter/material-components-android-codelabs-101-starter/java/shrine" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+</project>

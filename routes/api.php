@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+// use Symfony\Component\Routing\Annotation\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -295,15 +297,17 @@ Route::get('v3/list-cart', 'Api\User\AddtocartController@index');
 /*user login*/
 
 /*change password*/
-   	Route::post('v3/change-password', 'Api\User\UserController@changePassword');
+Route::post('v3/change-password', 'Api\User\UserController@changePassword');
+Route::get('v3/category', 'Api\User\CategoryController@index');
+Route::get('v3/sub-category/{category_id?}', 'Api\User\SubcategoryController@index');
 Route::group([
     'middleware' => 'auth:api',
     'prefix'    => 'v3',
     'namespace' => '\Api\User'
 ], function(){ 
 	Route::get('slide', 'SlideController@index');
-	Route::get('category', 'CategoryController@index');
-	Route::get('sub-category/{category_id?}', 'SubcategoryController@index');
+	// Route::get('category', 'CategoryController@index');
+	// Route::get('sub-category/{category_id?}', 'SubcategoryController@index');
 
 	/*product*/
 	Route::get('product', 'ProductController@index');
@@ -355,25 +359,84 @@ Route::post('v4/login', 'Api\Saller\UserController@login');*/
 /*saller*/
 
 Route::post('v4/login', 'Api\Saller\UserController@login');
+Route::post('v4/login-fb', 'Api\Saller\UserController@login_fb');
+Route::post('v4/find-user', 'Api\Saller\UserController@findUser');
+Route::post('v4/setnew-password', 'Api\Saller\UserController@setNewPassword');
+
+Route::get('v4/category', 'Api\Saller\CategoryController@parentCategory');
+Route::get('v4/category-parent/{parent_id}', 'Api\Saller\CategoryController@category');
+Route::get('v4/category-sub/{parent_id}/{sub_id}', 'Api\Saller\CategoryController@subCategory');
+Route::get('v4/brand', 'Api\Saller\BrandController@index');
+Route::get('v4/supplier', 'Api\Saller\SupplierController@index');
+Route::get('v4/unit', 'Api\Saller\UnitController@index');
 
 Route::group([
     'middleware' => 'auth:api',
     'prefix'    => 'v4',
-    'namespace' => '\Api\Saller'
+    'namespace' => '\Api\Saller',
 ], function(){ 
-	Route::post('register', 'UserController@register');
-	Route::get('product/{user_id}/{skip?}', 'ProductController@index');
-	Route::get('product-pending/{user_id}/{skip?}', 'ProductController@pendding');
-	Route::get('product-shipping/{user_id}/{skip?}', 'ProductController@shipping');
-	Route::get('product-delivery/{user_id}/{skip?}', 'ProductController@delivery');
-	Route::get('product-cancel/{user_id}/{skip?}', 'ProductController@cancel');
-	Route::get('order-report/{user_id}', 'ProductController@orderreport');
-	Route::get('shop-detail/{user_id}', 'ShopController@index');
+	Route::get('product/{shop_id}/{skip?}', 'ProductController@index');
+	Route::get('product-pending/{shop_id}/{skip?}', 'ProductController@pendding');
+	Route::get('product-shipping/{shop_id}/{skip?}', 'ProductController@shipping');
+	Route::get('product-delivery/{shop_id}/{skip?}', 'ProductController@delivery');
+	Route::get('product-cancel/{shop_id}/{skip?}', 'ProductController@cancel');
+	Route::get('order-report/{shop_id}', 'ProductController@orderreport');
+	Route::get('product-report/{user_id}', 'ProductController@productreport');
+	// Route::get('shop-detail/{user_id}', 'ShopController@index');
 	Route::get('about', 'PageController@about');
-	Route::get('term', 'PageController@term');
+	Route::get('policy', 'PageController@policy');
+	Route::get('saleononlineget', 'PageController@saleononlineget');
 
-
-	Route::get('profile/{user_id?}', 'UserController@profile');
 	Route::post('change-profile/{user_id?}', 'UserController@changeProfile');
 	Route::post('change-password', 'UserController@changePassword');
+		
+	Route::post('add-product', 'ProductController@addProduct');
+	Route::post('delete-product', 'ProductController@deleteProduct');
+	Route::get('profile/{user_id?}', 'UserController@profile');
+	Route::get('product-onsale/{user_id}/{skip?}', 'ProductController@onsale');
+	Route::get('product-sold/{shop_id}/{skip?}', 'ProductController@sold');
+	Route::get('shop-detail/{id}/{user_id}', 'ShopController@index');
+
+	Route::post('profile-edit-username', 'UserController@editUsername');
+	Route::post('profile-edit-email', 'UserController@editEmail');
+	Route::post('profile-edit-phone', 'UserController@editPhone');
+	Route::post('profile-edit-address', 'UserController@editAddress');
+	Route::post('profile-edit-bio', 'UserController@editBio');
+	Route::post('profile-edit-profile', 'UserController@editProfile');
+	
+	Route::post('shop-edit-name', 'ShopController@editShopName');
+	Route::post('shop-edit-email', 'ShopController@editShopEmail');
+	Route::post('shop-edit-phone', 'ShopController@editShopPhone');
+	Route::post('shop-edit-address', 'ShopController@editShopAddress');
+	Route::post('shop-edit-detail', 'ShopController@editShopDetail');
+	Route::post('shop-edit-logo', 'ShopController@editShopLogo');
+	Route::post('shop-edit-cover', 'ShopController@editShopCover');
+	Route::post('shop-create', 'ShopController@createShop');
+
+	Route::get('product-all-item/{shop_id}/{user_id}', 'ProductController@getItemAllOrder');
+	Route::get('product-pending-item/{shop_id}/{user_id}', 'ProductController@getItemPendingOrder');
+	Route::get('product-shipping-item/{shop_id}/{user_id}', 'ProductController@getItemShippingOrder');
+	Route::get('product-delivery-item/{shop_id}/{user_id}', 'ProductController@getItemDeliveryOrder');
+	Route::get('product-canceled-item/{shop_id}/{user_id}', 'ProductController@getItemCanceledOrder');
+
+	Route::get('category-show/{category_id}/{parent_id}/{sub_id}', 'CategoryController@showCategory');
+	Route::get('brand-show/{brand_id}', 'BrandController@showBrand');
+	Route::get('unit-show/{unit_id}', 'UnitController@showUnit');
+	Route::get('supplier-show/{supplier_id}', 'SupplierController@showSupplier');
+
+	Route::get('gallery/{product_id}', 'GalleryController@getGalleries');
+
+	Route::post('product-edit-name', 'ProductController@editProductName');
+	Route::post('product-edit-qty', 'ProductController@editProductQty');
+	Route::post('product-edit-sellprice', 'ProductController@editProductSellPrice');
+	Route::post('product-edit-category', 'ProductController@editProductCategory');
+	Route::post('product-edit-brand', 'ProductController@editProductBrand');
+	Route::post('product-edit-supplier', 'ProductController@editProductSupplier');
+	Route::post('product-edit-unit', 'ProductController@editProductUnit');
+	Route::post('product-edit-video', 'ProductController@editProductVideo');
+	Route::post('product-edit-des', 'ProductController@editProductDes');
+
+	Route::post('pending-accept', 'ProductController@acceptPending');
+	Route::post('pending-denied', 'ProductController@deniedPending');
+	Route::post('shipping-accept', 'ProductController@acceptShipping');
 });

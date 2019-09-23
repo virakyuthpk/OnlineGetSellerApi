@@ -40,9 +40,8 @@ class CategoryController extends Controller
             return response()->json([
                 'success' => false,
                 'data' => null, 
-                'message' => 'Parent cate ID and Cate ID cannot be 0 or null.'
+                'message' => 'Parent cate ID and Cate ID cannot be 0 or null.',
             ]);
         }
-        
     }
 }

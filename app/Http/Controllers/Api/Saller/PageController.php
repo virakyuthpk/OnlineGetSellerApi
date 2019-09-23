@@ -15,12 +15,20 @@ class PageController extends Controller
             'data' => $about
         ]);
     }
-    public function term()
+    public function policy()
     {
-    	$term = Page::select('des_en')->first(7);
+    	$policy = Page::select('des_en')->first(7);
     	return response()->json([
             'success' => true,
-            'data' => $term
+            'data' => $policy
+        ]);    
+    }
+    public function saleononlineget()
+    {
+    	$saleononlineget = Page::select('des_en')->first(6);
+    	return response()->json([
+            'success' => true,
+            'data' => $saleononlineget
         ]);    
     }
 }

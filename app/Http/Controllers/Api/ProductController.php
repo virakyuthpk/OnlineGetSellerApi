@@ -111,19 +111,19 @@ class ProductController extends Controller
                 $product->status =  $status;
                 $product->save();
                  //  picture
-                 $file_array = array();
-                 if($request->has('image')){
-                     foreach($request->file('image') as $image)
-                     {
-                         $fileName = Gallery::uploadFile('/product/photoalbum',$image,$request->tmp_file);
-                         $file = new Gallery;
-                        //  $file->image =$fileName ;
-                         $file->path = url('uploads/product/photoalbum').'/'.$fileName;
-                         $file->galleryable_id = $product->id;
-                         $file->galleryable_type= 'Product';
-                         $file->save();
-                     }
-                 }
+                $file_array = array();
+                if($request->has('image')){
+                    foreach($request->file('image') as $image)
+                    {
+                        $fileName = Gallery::uploadFile('/product/photoalbum',$image,$request->tmp_file);
+                        $file = new Gallery;
+                    //  $file->image =$fileName ;
+                        $file->path = url('uploads/product/photoalbum').'/'.$fileName;
+                        $file->galleryable_id = $product->id;
+                        $file->galleryable_type= 'Product';
+                        $file->save();
+                    }
+                }
                 return  new ProductResource($product);
             }else{
                 $product =  Product::find($id);
